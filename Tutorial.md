@@ -39,3 +39,55 @@ Below is our wireframe with the addition of the properties and methods we’d li
 
 To decide if you should create a new function or object, it’s useful to use the [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle); a component should ideally only do one thing. If it ends up growing, it should be decomposed into smaller subcomponents.
 
+![](https://github.com/DrVicki/react-components-props/blob/main/assets/breakdown.png)
+
+Here’s the breakdown of our components, their props, state and methods.
+
+### <App />
+
+  - **Props**: none
+  - **State**:
+    - ```students[{}]``` — array of objects
+    - ```pickFromAll``` — bool
+    - ```pickedStudent``` —object index of students array
+
+**Methods**:
+
+  - ```pickRandomStudent()``` — a method that will return a random student
+  - ```togglePickingStrategy()``` — a method to toggle our pickFromAll boolean
+  - ```render()``` — this component will render the 3 other components
+
+### <Student />
+
+   - **Props**:
+    - ```{student}```
+  - **State**:
+    - none
+
+**Methods**:
+  - ```render()``` — this component will render the student component
+
+## <Button />
+
+  - **Props**:
+    - ```handleClicked``` — this property will pass the pickRandomStudent prop from our ```<App />``` component down to the ```<Button />```
+ - **State**:
+    - None
+
+**Methods**:
+  - ```render()``` — this component will render the button component
+
+## <Toggle />
+
+  - **Props**:
+    - ```handleToggled``` — handles whether our toggle is on or off
+  - **State**:
+    - None
+
+**Methods**:
+  - ```render()``` — this component will render the toggle component
+
+# Create Your Components
+
+Now it’s time to create our components. Make sure VSCode is open to the root of your project and you’ve successfully run ```npm start``` after ```create-react-app yourappname```
+

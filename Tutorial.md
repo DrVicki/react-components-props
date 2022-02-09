@@ -240,7 +240,9 @@ We’ll focus on pickRandomStudent() for now
 
 Now in ```Button.js```, add an ```onClick``` property to a ```button``` element so the ```handleClicked``` property will be executed when there is a ```click``` event.
 
+![](https://github.com/DrVicki/react-components-props/blob/main/assets/buttonjs.png)
 
+Now, test!
 
 
 

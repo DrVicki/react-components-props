@@ -91,3 +91,7 @@ Here’s the breakdown of our components, their props, state and methods.
 
 Now it’s time to create our components. Make sure VSCode is open to the root of your project and you’ve successfully run ```npm start``` after ```create-react-app yourappname```
 
+![](https://github.com/DrVicki/react-components-props/blob/main/assets/create.png)
+
+
+

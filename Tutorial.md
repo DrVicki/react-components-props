@@ -308,3 +308,24 @@ Recall our incredibly professional application architecture diagram. In our stat
 
 Here is our constructor;
 
+![](https://github.com/DrVicki/react-components-props/blob/main/assets/consructor.png)
+```this.state``` is an object!
+
+## this.state
+
+Notice that ```this.state``` is an object. In our case, it is an object with 3 values:
+
+  1. an array of ```students``` **objects**
+  2. a ```pickFromAll``` **boolean**
+  3. a ```pickedStudent``` null
+
+Because ```this.state``` is in the constructor function of our component, it will be initialized as soon as the component renders to the screen.
+
+Let’s see if we can pass the ```<Student />``` component our ```pickedStudent``` object from the``` <App />```’s state.
+
+We want our student object prop passed from the ```<App />```  to represent the current picked student (which is null right now). This ensures that our ```<Student />``` is able to read from the state held in our ```<App />``` component.
+
+In our ```App.js``` ```render()``` function, change the prop passed to ```<Student />``` to be: ```{ this.state.pickedStudent }```
+
+
+

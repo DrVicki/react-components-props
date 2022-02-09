@@ -172,6 +172,8 @@ Next, compose them in the main ```<App />``` component in ```App.js```
 
   1. Import the Components at the top of your ```App.js``` file
 
+![](https://github.com/DrVicki/react-components-props/blob/main/assets/import%20components.png)
+
 
 
 

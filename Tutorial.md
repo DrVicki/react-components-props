@@ -230,6 +230,8 @@ We’ll focus on pickRandomStudent() for now
 
 ### Add our pickRandomStudent() method:
 
+![](https://github.com/DrVicki/react-components-props/blob/main/assets/pickRandomStudent.png)
+
 
 
 

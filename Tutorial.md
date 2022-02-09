@@ -211,4 +211,11 @@ Next, let’s choose one component to work on. I chose the ```<Student />``` com
 
   - We need to pass a ```{student}``` object prop from ```<App />``` to the the ```<Student />``` Component and make sure it displays a value from the student object (e.g., it could be an image, but we’ll choose a string in order to make things simple).
 
+![](https://github.com/DrVicki/react-components-props/blob/main/assets/student1.png)
+In our ```App.js``` file, pass a student object prop to the ```<Student />``` component
+
+
+
+
+
 

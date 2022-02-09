@@ -334,3 +334,37 @@ Notice that instead of ```this.props``` we are using ```this.state```  to tell R
 ![](https://github.com/DrVicki/react-components-props/blob/main/assets/typeerror.png)
 
 Right now, you’ll see an error in your web app, this is because ```this.state.pickedStudent``` is null. Let’s fix this by checking for null values in the ```<Student />``` component.
+
+![](https://github.com/DrVicki/react-components-props/blob/main/assets/pickedstudent.png)
+Only if the first part is truthy, then the second part will be evaluated.
+
+Since this.props.student is null because ```this.state.pickedStudent``` prop being passed from      <App />      is null, this statement evaluates to falsey. JavaScript will ignore the second part.
+
+Now that this is working, let’s work on the ```pickRandomStudent()``` method, and have it ```return``` one of the random students from our ```students``` object in our state.
+
+## Picking and Displaying A Random Student
+
+In our ```pickRandomStudent()``` method, we want to basically generate a random number between **0** and the ```this.state.students.length```, then set the value of ```pickedStudent``` in our state equal to the student with that random index number.
+
+```
+
+  pickRandomStudent = () => {
+    
+    //call this.setState to update our state
+    this.setState(() => ({
+      pickedStudent: this.state.students[Math.floor(Math.random() * this.state.students.length)]
+    }))
+
+  }
+  ```
+  
+## Updating State
+
+You’ll notice we used a new method, ```this.setState``` is a method included with React to update state, we need to call this method whenever we want to update state on a component.
+
+## Challenges:
+Here are a few challenges below in the event you have time and want to explore further.
+
+  1. **Challenge 1**: Use the React developer tools to explore the current state and props of your app
+  2. **Challenge 2**: Display the name for the passed student prop in the ```<Student />``` Component as well as the img.
+  3. **Challenge 3** (advanced): Implement the ```<Toggle />``` component functionality for yourself

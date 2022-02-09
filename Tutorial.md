@@ -304,4 +304,7 @@ Recall our incredibly professional application architecture diagram. In our stat
   - ```pickFromAll``` — This is a bool that indicates whether we pick totally randomly or from those who haven’t been chosen
   - ```pickedStudent``` — This is the student object returned from our pickRandomStudent() method.
 
+![](https://github.com/DrVicki/react-components-props/blob/main/assets/design3.png)
+
+Here is our constructor;
 

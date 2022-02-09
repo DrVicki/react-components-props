@@ -174,7 +174,10 @@ Next, compose them in the main ```<App />``` component in ```App.js```
 
 ![](https://github.com/DrVicki/react-components-props/blob/main/assets/import%20components.png)
 
+  -2. 2. Compose them in the ```App.js``` ```render()``` method. Be sure and delete the default ```<header>``` code.
+  
+![](https://github.com/DrVicki/react-components-props/blob/main/assets/render-method.png)
 
-
+  -3. Next, add you 3 components in and save to see the result:
 
 

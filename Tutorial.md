@@ -180,4 +180,35 @@ Next, compose them in the main ```<App />``` component in ```App.js```
 
   -3. Next, add you 3 components in and save to see the result:
 
+![](https://github.com/DrVicki/react-components-props/blob/main/assets/initial-result.png)
+
+**App.js**
+```
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+import Button from './Components/Button'
+import Toggle from './Components/Toggle'
+import Student from './Components/Student'
+
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Student />
+        <Button />
+        <Toggle />
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
+Next, let’s choose one component to work on. I chose the ```<Student />``` component. A good strategy is to take a look a the properties we need to pass:
+
+  - We need to pass a ```{student}``` object prop from ```<App />``` to the the ```<Student />``` Component and make sure it displays a value from the student object (e.g., it could be an image, but we’ll choose a string in order to make things simple).
+
 

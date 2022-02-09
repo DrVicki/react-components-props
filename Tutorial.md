@@ -244,5 +244,64 @@ Now in ```Button.js```, add an ```onClick``` property to a ```button``` element 
 
 Now, test!
 
+![](https://github.com/DrVicki/react-components-props/blob/main/assets/test.png)
+
+Okay, it’s almost working. Instead of working on the Toggle (which is a nice-to-have feature, and may not be as high priority) let’s tackle the data side of the application and cover a critical area of React programming: State.
+
+## What is State?!
+
+To build our prototype correctly, we need to have a place (or way) to store the variables our components need to represent their current state.
+
+Like all programming, the key is **DRY**: Don’t Repeat Yourself. In our diagram above, you’ll notice we have an extra classification called **state** in our ```<App />``` component, but we don’t have any state in any other component (they are called stateless components).
+
+For example, since we are building an application to replace the process of manually using flashcards to call on students, we need a an array of ```{students}``` , as well as the currently picked student, and whether or not we want to randomly choose a student from the whole list, or just those who haven’t been chosen.
+
+Think of all of the pieces of data in our app. We have:
+
+  - A list of students
+  - The value of the toggle
+  - The currently displayed student
+  - The button that chooses a new student
+
+Let’s go through each one and figure out which one is state. Simply ask three questions about each piece of data:
+
+  1. Is it passed in from a parent via props? If so, it probably isn’t state.
+  2. Does it remain unchanged over time? If so, it probably isn’t state.
+  3. Can you compute it based on any other state or props in your component? If so, it isn’t state.
+
+
+### Should this Component have state?
+
+**state is optional**. Since state increases complexity and reduces predictability, a Component without state is preferable. Even though you clearly can’t do without state in an interactive app like the one we’re building, you should avoid having too many Stateful Components. In our app, the Stateful Component is…```<App />```.
+
+### Component types
+
+  - **Stateless Component** — Only props, no state. There’s not much going on besides the ```render()``` function and all their logic revolves around the props they receive. This makes them very easy to follow (and test for that matter).
+  - **Stateful Component** — Both props and state. We also call these state managers. They process data and respond to user events. These sort of logistics should be encapsulated in a moderate number of Stateful Components, while all visualization and formatting logic should move downstream into as many Stateless Components as possible. In our application, all of our state is in the ```<App />``` component.
+
+**When should you use props and when should you use state?**
+
+If a Component needs to alter one of its attributes at some point in time, that attribute should be part of its state, otherwise it should just be a prop for that Component.
+
+**The Constructor**
+
+Every component with state needs a constructor method. The ```constructor``` is where we initialize our ```state``` in the component. If you have state, you must have a constructor. Here is how to write this. It is the first thing you declare after your class.
+
+```
+//how to create a constructor for your Class
+constructor(props) {
+   super(props);
+   this.state = {
+   }
+};
+```
+
+## The State of Our State
+
+Recall our incredibly professional application architecture diagram. In our state, we have the following:
+ 
+  - ```Students[]``` — This is an array of student objects (e.g., just the name, image for now)
+  - ```pickFromAll``` — This is a bool that indicates whether we pick totally randomly or from those who haven’t been chosen
+  - ```pickedStudent``` — This is the student object returned from our pickRandomStudent() method.
 
 

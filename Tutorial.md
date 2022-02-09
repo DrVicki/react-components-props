@@ -331,3 +331,6 @@ In our ```App.js``` ```render()``` function, change the prop passed to ```<Stude
 
 Notice that instead of ```this.props``` we are using ```this.state```  to tell React we want to read from the state of the current component, which is managed by our Controller (e.g., ```App.js```).
 
+![](https://github.com/DrVicki/react-components-props/blob/main/assets/typeerror.png)
+
+Right now, you’ll see an error in your web app, this is because ```this.state.pickedStudent``` is null. Let’s fix this by checking for null values in the ```<Student />``` component.

@@ -224,6 +224,15 @@ That’s all for the Student Component. Next, let’s get the Button working.
 
 Take a look at our incredible app design diagram. We’re going to have all of our functions within the ```<App />``` component, which is the controller in our MVC model. Let’s get to work on the method that will handle when the user presses the button.
 
+![](https://github.com/DrVicki/react-components-props/blob/main/assets/design-model.png)
+We’ll focus on pickRandomStudent() for now
+
+
+### Add our pickRandomStudent() method:
+
+
+
+
 
 
 

@@ -233,6 +233,8 @@ We’ll focus on pickRandomStudent() for now
 ![](https://github.com/DrVicki/react-components-props/blob/main/assets/pickRandomStudent.png)
 
 
+![](https://github.com/DrVicki/react-components-props/blob/main/assets/design2.png)
+
 
 
 

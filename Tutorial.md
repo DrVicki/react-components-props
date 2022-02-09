@@ -327,5 +327,7 @@ We want our student object prop passed from the ```<App />```  to represent the 
 
 In our ```App.js``` ```render()``` function, change the prop passed to ```<Student />``` to be: ```{ this.state.pickedStudent }```
 
+![](https://github.com/DrVicki/react-components-props/blob/main/assets/render2.png)
 
+Notice that instead of ```this.props``` we are using ```this.state```  to tell React we want to read from the state of the current component, which is managed by our Controller (e.g., ```App.js```).
 

@@ -215,6 +215,14 @@ Next, let’s choose one component to work on. I chose the ```<Student />``` com
 In our ```App.js``` file, pass a student object prop to the ```<Student />``` component
 
 
+![](https://github.com/DrVicki/react-components-props/blob/main/assets/passed-student.png)
+Now, in ```Student.js```, display the passed in student object name prop
+
+  - We choose a ```{student}``` object instead of a string because later on, we want to pass many props to the component (e.g., image, last name, whatever)
+
+That’s all for the Student Component. Next, let’s get the Button working.
+
+Take a look at our incredible app design diagram. We’re going to have all of our functions within the ```<App />``` component, which is the controller in our MVC model. Let’s get to work on the method that will handle when the user presses the button.
 
 
 

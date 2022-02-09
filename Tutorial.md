@@ -93,5 +93,86 @@ Now it’s time to create our components. Make sure VSCode is open to the root o
 
 ![](https://github.com/DrVicki/react-components-props/blob/main/assets/create.png)
 
+![](https://github.com/DrVicki/react-components-props/blob/main/assets/create2.png)
+  - Create a new folder and make your components as separate ```.js``` files.
+
+Next, copy some skeleton (boilerplate code to create your components, this saves some typing)
+
+**React Boilerplate for creating a component**
+
+```
+//here is a boilerplate component structure
+import React, { Component } from 'react';
+class YourClassName extends Component {
+   constructor(props) {
+     super(props)
+       this.state = {  }
+   }
+   render() {
+      return (  );
+   }
+}
+export default YourClassName ;
+
+```
+
+Use this boilerplate to get your basic components to render to the screen. Our first goal is simply to make sure each is composed properly.
+
+Since we now have our component hierarchy, it’s time to implement our app in the easiest way possible, which is to build a version that renders the UI but has no interactivity. It’s best to decouple the interactive and static display processes because building a static version requires a lot of typing and no thinking, and adding interactivity requires a lot of thinking and not a lot of typing.
+
+**Button.js**
+```
+import React, { Component } from 'react';
+
+class Button extends Component {
+    state = {  }
+    render() { 
+        return (  
+            <div>Button</div>
+        );
+    }
+}
+ 
+export default Button ;
+```
+
+**Toggle.js**
+```
+import React, { Component } from 'react';
+
+class Toggle extends Component {
+    state = {  }
+    render() { 
+        return (  
+            <div>Toggle</div>
+        );
+    }
+}
+ 
+export default Toggle ;
+```
+
+**Student.js**
+```
+import React, { Component } from 'react';
+
+class Student extends Component {
+    state = {  }
+    render() { 
+        return (  
+            <div>Student</div>
+        );
+    }
+}
+ 
+export default Student ;
+```
+
+Next, compose them in the main ```<App />``` component in ```App.js```
+
+  1. Import the Components at the top of your ```App.js``` file
+
+
+
 
 
